@@ -40,7 +40,7 @@
 
         function getAllCountry() {
             $.ajax({
-                url: "/items/country-city",
+                url: "${pageContext.servletContext.contextPath}/country-city",
                 success: function (data) {
                     var dataCountry = '<option value = "">Chose country</option>';
                     $.each(data, function (index, value) {
@@ -57,7 +57,7 @@
         function getAllCityByCountry(country) {
             $.ajax({
                 method: "POST",
-                url: "/items/country-city",
+                url: "${pageContext.servletContext.contextPath}/country-city",
                 data: {
                     country : country
                 },
